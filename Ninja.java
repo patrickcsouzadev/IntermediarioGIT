@@ -1,65 +1,64 @@
 package NivelIntrermediario.Aula14;
 
-public abstract class Ninja implements EstrategiaDeBatalha {
+public abstract class Ninja {
 
-    //TODO: Incluir 2 novos atributos: numeroDeMissoesConcluidas, Rank
-    //TODO: Rank: Genin, Chunnin, Jounin, Kage
+    private String nome;
+    private String aldeia;
+    private int  idade;
+    private int numeroDeMissoesConcluidas;
+    private double altura = 1.75;
 
-    String nome;
-    int aldeia;
-    int idade;
-    int numeroDeMissoesConcluidas;
-    NivelNinja rank;
-    final double altura = 1.77;
-
-    public Ninja(){
-        // Construtor padrão (vazio)
+    public Ninja() {
     }
 
-    //Primeiro metodo construtor
-    public Ninja(String nome, int aldeia, int idade) {
+    public Ninja(String nome, String aldeia, int idade, int numeroDeMissoesConcluidas, double altura) {
         this.nome = nome;
         this.aldeia = aldeia;
         this.idade = idade;
-    }
-
-    //TODO: Sobre carga do construtor chamando os novos atributos
-    // Sobre carga de metodos você não precisa redeclarar o construtor inteiro. Somente os novos atributos.
-
-    public Ninja(String nome, int aldeia, int idade, int numeroDeMissoesConcluidas, NivelNinja rank) {
-        this(nome, aldeia, idade);
         this.numeroDeMissoesConcluidas = numeroDeMissoesConcluidas;
-        this.rank = rank;
+        this.altura = altura;
     }
 
-    //metodos que todos ninjas devem ter
-    public void habilidadeEspecial() {
-        System.out.println("Meu nome é " + nome + " e essse é meu ataque especial");
+    // Para tirar dados ou mostrar para o usuário eu uso o GET + NOME DA VARIAVEL
 
+    public String getNome() {
+        return nome;
     }
 
-    public void estrategiaDeBatalhaNinja(){
-        System.out.println("Estratégia de batalha: " + nome);
+    // SETTER recebe valores
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    //Sobrecarga de metodo - inteligencia de combate
-    public void inteligenciaDeCombate() {
-        System.out.println("Inteligencia de combate: " + nome);
+    public String getAldeia() {
+        return aldeia;
     }
 
-    //Sobrecarga de metodo - inteligencia de combate
-    public void inteligenciaDeCombate(int QI) {
-        if (QI >= 100) {
-            System.out.println("Inteligencia de combate: " + nome + " - QI: " + QI + " Você é um gênio!!");
-        } else if (QI > 80 && QI < 100) {
-            System.out.println("Inteligencia de combate: " + nome + " - QI: " + QI + " Você é fora da curva!!");
-        } else {
-            System.out.println("Inteligencia de combate: " + nome + " - QI: " + QI + " Você esta na média!!");
-        }
+    public void setAldeia(String aldeia) {
+        this.aldeia = aldeia;
     }
 
-    //TODO NINJA VAI FAZER
-    final void tacarKunai(){
-        System.out.println("Eu sou o método da classe mãe");
+    public int getIdade() {
+        return idade;
+    }
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public int getNumeroDeMissoesConcluidas() {
+        return numeroDeMissoesConcluidas;
+    }
+
+    public void setNumeroDeMissoesConcluidas(int numeroDeMissoesConcluidas) {
+        this.numeroDeMissoesConcluidas = numeroDeMissoesConcluidas;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(double altura) {
+        this.altura = altura;
     }
 }
