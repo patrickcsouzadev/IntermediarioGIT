@@ -3,15 +3,11 @@ package NivelIntrermediario.Aula14;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("---------------- Naruto Uzumaki ----------------");
-        Uzumaki Naruto = new Uzumaki("Naruto Uzumaki", "Aldeia da Folha", 17, 100, 1.80);
-        System.out.println("Meu nome é: " + Naruto.getNome()); // pegando o nome do atributo através do métodó GET
-        Naruto.setNome("Naruto Uzumaki alterado"    ); // mudando o nome do atributo através do métodó SET
-        System.out.println("Meu nome é: " + Naruto.getNome());
+        Missoes missaso1 = new Missoes("Resgatar cachorro, ", RankDeMissoes.D);
+        missaso1.exibirDetalhes();
 
-
-        System.out.println("---------------- Sasuke Uchiha ----------------");
-        Uchiha Sasuke = new Uchiha("Sasuke Uchiha", "Aldeia da Folha", 17, 100, 1.80);
+        Missoes missao2 = new Missoes("Derrotar Zabuza, ", RankDeMissoes.B);
+        missao2.exibirDetalhes();
 
     }
 }
