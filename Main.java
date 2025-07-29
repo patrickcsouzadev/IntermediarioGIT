@@ -2,29 +2,15 @@ package NivelIntrermediario.Aula14;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {
 
-        EquipamentosNinja kunai = new EquipamentosNinja("Kunai");
-        EquipamentosNinja shuriken = new EquipamentosNinja("Shuriken");
-        EquipamentosNinja espada = new EquipamentosNinja("Espada");
-        EquipamentosNinja bombaDeFumaça = new EquipamentosNinja("Bomba de Fumaça");
-        EquipamentosNinja bombaDeFogo = new EquipamentosNinja("Bomba de Fogo");
-        EquipamentosNinja bombaDeGelo = new EquipamentosNinja("Bomba de Gelo");
-        EquipamentosNinja bombaDeTinta = new EquipamentosNinja("Bomba de Tinta");
-
-        BolsaGenerica<EquipamentosNinja> bolsaNinja = new BolsaGenerica<>(new ArrayList<>());
-        bolsaNinja.adicionarEquipamentos(kunai);
-        bolsaNinja.adicionarEquipamentos(shuriken);
-        bolsaNinja.adicionarEquipamentos(espada);
-        bolsaNinja.adicionarEquipamentos(bombaDeFumaça);
-        bolsaNinja.adicionarEquipamentos(bombaDeFogo);
-        bolsaNinja.adicionarEquipamentos(bombaDeGelo);
-        bolsaNinja.adicionarEquipamentos(bombaDeTinta);
-
-        System.out.println(bolsaNinja);
-
-
+        BolsaNinja<Object> bolsaNinja = new BolsaNinja<>();
+        // Adicionando equipamentos ninja
+        bolsaNinja.adicionarFerramentas(new Shuriken(10));
+        bolsaNinja.adicionarFerramentas(new Pergaminho("Invicação do SAPO!"));
+        bolsaNinja.adicionarFerramentas(new Kunai("Kunai de 10 metros"));
     }
 }
