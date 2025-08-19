@@ -1,5 +1,6 @@
 package NivelIntrermediario.Aula14;
 
+import java.lang.classfile.instruction.NopInstruction;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -7,10 +8,10 @@ import java.util.Objects;
 public class Main {
     public static void main(String[] args) {
 
-        BolsaNinja<Object> bolsaNinja = new BolsaNinja<>();
-        // Adicionando equipamentos ninja
-        bolsaNinja.adicionarFerramentas(new Shuriken(10));
-        bolsaNinja.adicionarFerramentas(new Pergaminho("Invicação do SAPO!"));
-        bolsaNinja.adicionarFerramentas(new Kunai("Kunai de 10 metros"));
+        Ninja cadastroNinja = new Ninja("Naruto", "naruto@gmail", 999999999);
+        System.out.println("Cadastro =" + cadastroNinja);
+
+        NinjaRecord cadastroNinjaRecord = new NinjaRecord("Naruto", "naruto@gmail", 999999999);
+        System.out.println("Cadastro Record =" + cadastroNinjaRecord);
     }
 }

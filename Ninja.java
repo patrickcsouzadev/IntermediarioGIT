@@ -1,64 +1,26 @@
 package NivelIntrermediario.Aula14;
 
-public abstract class Ninja {
+public class Ninja {
 
-    private String nome;
-    private String aldeia;
-    private int  idade;
-    private int numeroDeMissoesConcluidas;
-    private double altura = 1.75;
+    private final String nome;
+    private final String email;
+    private final int telefone;
 
-    public Ninja() {
-    }
-
-    public Ninja(String nome, String aldeia, int idade, int numeroDeMissoesConcluidas, double altura) {
+    public Ninja(String nome, String email, int telefone) {
         this.nome = nome;
-        this.aldeia = aldeia;
-        this.idade = idade;
-        this.numeroDeMissoesConcluidas = numeroDeMissoesConcluidas;
-        this.altura = altura;
+        this.email = email;
+        this.telefone = telefone;
     }
-
-    // Para tirar dados ou mostrar para o usuário eu uso o GET + NOME DA VARIAVEL
-
+// Como os atributos são finals, não é possivel  colocar Setters para atribuir um novo valor.
     public String getNome() {
         return nome;
     }
 
-    // SETTER recebe valores
-    public void setNome(String nome) {
-        this.nome = nome;
+    public String getEmail() {
+        return email;
     }
 
-    public String getAldeia() {
-        return aldeia;
-    }
-
-    public void setAldeia(String aldeia) {
-        this.aldeia = aldeia;
-    }
-
-    public int getIdade() {
-        return idade;
-    }
-
-    public void setIdade(int idade) {
-        this.idade = idade;
-    }
-
-    public int getNumeroDeMissoesConcluidas() {
-        return numeroDeMissoesConcluidas;
-    }
-
-    public void setNumeroDeMissoesConcluidas(int numeroDeMissoesConcluidas) {
-        this.numeroDeMissoesConcluidas = numeroDeMissoesConcluidas;
-    }
-
-    public double getAltura() {
-        return altura;
-    }
-
-    public void setAltura(double altura) {
-        this.altura = altura;
+    public int getTelefone() {
+        return telefone;
     }
 }

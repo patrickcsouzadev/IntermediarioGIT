@@ -1,11 +1,8 @@
 package NivelIntrermediario.Aula14;
 
-public class Uzumaki extends Ninja {
-
-    public Uzumaki() {
-    }
+public class Uzumaki {
 
     public Uzumaki(String nome, String aldeia, int idade, int numeroDeMissoesConcluidas, double altura) {
-        super(nome, aldeia, idade, numeroDeMissoesConcluidas, altura);
+        super();
     }
 }
