@@ -11,10 +11,16 @@ public class Main {
         ninjaList.add("Sasuke");
         ninjaList.add("Naruto");
         ninjaList.add("Sakura");
+        ninjaList.add("Kakashi");
+        ninjaList.add("Boruto");
         System.out.println("Ninja List: " + ninjaList);
 
-        Set<String> ninjaSet = new HashSet<>();
+        Set<String> ninjaSet = new TreeSet<>(); // implementação de Set que ordena os elementos
         ninjaSet.addAll(ninjaList);
-        System.out.println("Ninja Set: " + ninjaSet);
+        System.out.println("Lista Ninja com TreeSet: " + ninjaSet);
+
+        Set<String> ninjaSet2 = new LinkedHashSet<>(); // implementação de Set que mantém a ordem de inserção
+        ninjaSet2.addAll(ninjaList);
+        System.out.println("Lista Ninja com LinkedHashSet: " + ninjaSet2);
     }
 }
