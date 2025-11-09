@@ -1,10 +1,7 @@
 package NivelIntrermediario.Aula14;
 
 import java.lang.classfile.instruction.NopInstruction;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-import java.util.Stack;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -44,5 +41,27 @@ public class Main {
         ninjasStack.push("Kakashi");
         ninjasStack.pop();
         System.out.println("Minha Stack: " + ninjasStack);
+
+        // QUEUE = FILAS
+        //Exigem uma ordem! O primeiro que entra é o primeiro que sai (FIFO - First In, First Out).
+        //O primeiro elemento que entrou é obrigatoriamente o primeiro a sair.
+        //Não deixa retirar qualquer elemento, só o primeiro que entrou.
+        //E o inverso de uma STACK(PILHA).
+        Queue<String> ninjasQueue = new LinkedList<>();
+        ninjasQueue.add("Naruto");
+        ninjasQueue.add("Sasuke");
+        ninjasQueue.add("Minato");
+        ninjasQueue.add("Kakashi");
+        System.out.println("Minha Queue: " + ninjasQueue);
+        ninjasQueue.poll(); //remove o primeiro elemento da fila
+        ninjasQueue.peek(); //mostra o primeiro elemento da fila sem remover
+        System.out.println("Ninja do topo: " + ninjasQueue.peek());
+        ninjasQueue.add("Jiraya");
+        System.out.println("Minha Queue após alterações: " + ninjasQueue);
+        if (ninjasStack.isEmpty()) {
+            System.out.println("A pilha está vazia.");
+        } else {
+            System.out.println("A pilha não está vazia.");
+        }
     }
 }
