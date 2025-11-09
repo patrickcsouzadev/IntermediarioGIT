@@ -20,7 +20,6 @@ public class Main {
         //São dinamicas e tamanho aumenta ou diminui conforme adicionamos ou removemos elementos.
         //Podemos usar ArrayList, LinkedList, etc.
         //Lista é um pouco mais lenta que o array, mas é mais flexivel.
-
         System.out.println("----------------Listas----------------");
         List<String> ninjasList = new ArrayList<>();
         ninjasList.add("1");
@@ -63,5 +62,18 @@ public class Main {
         } else {
             System.out.println("A pilha não está vazia.");
         }
+
+        //LINKEDLIST
+        //Trabalha com ponteiros, onde cada elemento aponta para o próximo.
+        //Permite adicionar e remover elementos em qualquer posição da lista.
+        LinkedList<String> linkedListNinjas = new LinkedList<>();
+        linkedListNinjas.add("Itachi");
+        linkedListNinjas.add("Orochimaru");
+        linkedListNinjas.add("Kurenai");
+        System.out.println("Minha LinkedList: " + linkedListNinjas);
+        linkedListNinjas.add(1, "Shisui"); //adiciona na posição 1
+        System.out.println("Minha LinkedList após adição: " + linkedListNinjas);
+        linkedListNinjas.remove(2); //remove o elemento da posição 2
+        System.out.println("Minha LinkedList após remoção: " + linkedListNinjas);
     }
 }
